@@ -1,6 +1,7 @@
-package com.example.agenda.ui.home
+package com.example.agenda.ui.Fragments
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,10 +14,9 @@ import com.example.agenda.R
 import com.example.agenda.adapter.MyAdapter
 import com.example.agenda.model.Contact
 import com.example.agenda.model.Telefone
-import com.google.firebase.firestore.FieldPath
-import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
 
@@ -47,6 +47,19 @@ class HomeFragment : Fragment() {
 
 
 
+        adapter.setOnItemClickListener(object : MyAdapter.OnItemClickListener {
+            override fun onItemClick(contact: Contact) {
+                val gson = Gson()
+                val telefonesContatoJson = gson.toJson(contact.telefones)
+                val intent = Intent(requireContext(), DetailFragment::class.java)
+                intent.putExtra("idContato", contact.id)
+
+                intent.putExtra("nomeContato", contact.nome)
+                intent.putExtra("telefonesContatoJson", telefonesContatoJson)
+
+                startActivity(intent)
+            }
+        })
 
         return view
     }

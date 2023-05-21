@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.agenda.ui.home.HomeFragment"
+        android:name="com.example.agenda.ui.Fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_addcontact"
-        android:name="com.example.agenda.addcontact.AddContactFragment"
+        android:name="com.example.agenda.ui.Fragments.AddContactFragment"
         android:label="Adicionar"
         tools:layout="@layout/fragment_addcontact" />
 
