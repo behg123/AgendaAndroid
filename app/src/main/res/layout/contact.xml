@@ -3,10 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+<<<<<<< HEAD
     app:cardCornerRadius="8dp"
     android:layout_margin="16dp"
 
 
+=======
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp"
+>>>>>>> origin/main
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -17,15 +23,24 @@
         android:src="@drawable/default_pfp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
     />
+=======
+        />
+>>>>>>> origin/main
     <TextView
         android:id="@+id/nomeContato"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="@string/abreu_dos_santos_junior"
         android:textSize="30sp"
         android:textStyle="bold"
         android:maxLines="1"
+=======
+        android:text="Abreu dos Santos Junior"
+        android:textStyle="bold"
+>>>>>>> origin/main
         android:textColor="@color/black"
         android:layout_marginStart="90dp"
         android:layout_marginTop="10dp"
@@ -34,6 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+<<<<<<< HEAD
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewTelefone"
         android:layout_width="match_parent"
@@ -44,5 +60,17 @@
         app:layout_constraintTop_toTopOf="@+id/nomeContato"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+=======
+    <TextView
+        android:id="@+id/telefoneContato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3319-4414"
+        app:layout_constraintTop_toBottomOf="@+id/nomeContato"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+
+>>>>>>> origin/main
         />
 </androidx.cardview.widget.CardView>

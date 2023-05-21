@@ -9,6 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="match_parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -16,10 +17,14 @@
         android:layout_margin="0dp"
         >
 
+=======
+        android:layout_height="match_parent">
+>>>>>>> origin/main
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewContatos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,4 +32,15 @@
     </ScrollView>
 
 
+=======
+        />
+    </ScrollView>
+
+
+
+
+
+
+
+>>>>>>> origin/main
 </androidx.constraintlayout.widget.ConstraintLayout>
