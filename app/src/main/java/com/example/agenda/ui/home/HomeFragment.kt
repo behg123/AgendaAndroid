@@ -6,18 +6,16 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agenda.R
 import com.example.agenda.adapter.MyAdapter
-import com.example.agenda.databinding.FragmentHomeBinding
 import com.example.agenda.model.Contact
 import com.example.agenda.model.Telefone
+import com.google.firebase.firestore.FieldPath
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 
 class HomeFragment : Fragment() {
@@ -45,6 +43,10 @@ class HomeFragment : Fragment() {
         recyclerViewContacts.adapter = adapter
 
         getUserData()
+        Log.d("Mensagem", "Teste")
+
+
+
 
         return view
     }
