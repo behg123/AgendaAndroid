@@ -7,15 +7,11 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-<<<<<<< HEAD
         android:id="@+id/textInputLayout"
-=======
->>>>>>> origin/main
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-<<<<<<< HEAD
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/nome"
@@ -23,42 +19,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/person_icon">
-=======
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="32dp"
-        android:hint="Nome"
-        app:startIconDrawable="@drawable/person_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
->>>>>>> origin/main
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/getNomeContato"
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:inputType="text"
 
             />
-=======
-            android:layout_height="wrap_content" />
->>>>>>> origin/main
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
-<<<<<<< HEAD
         android:id="@+id/textInputLayout2"
-=======
->>>>>>> origin/main
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-<<<<<<< HEAD
         android:layout_marginTop="128dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/telefone"
@@ -78,28 +57,6 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:maxLength="12" />
-=======
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="128dp"
-        android:hint="Telefone"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
-        app:prefixText="+55"
-
-        app:startIconDrawable="@drawable/telephone_icon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:maxLength="20"
-            android:id="@+id/getTelefoneContato"
-            android:inputType="number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
->>>>>>> origin/main
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -112,24 +69,16 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="228dp"
-<<<<<<< HEAD
         android:text="@string/tipo_de_telefone"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20sp"
-=======
-        android:text="Tipo de Telefone"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="20dp"
->>>>>>> origin/main
         />
 
     <Spinner
         android:id="@+id/spinnerPhoneType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginStart="32dp"
         android:layout_marginTop="256dp"
         android:layout_marginEnd="32dp"
@@ -151,17 +100,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerPhoneType" />
 
-=======
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/border"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="256dp"
-        android:padding="16dp"
-
-        />
-
->>>>>>> origin/main
 </androidx.constraintlayout.widget.ConstraintLayout>

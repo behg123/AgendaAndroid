@@ -1,6 +1,5 @@
 package com.example.agenda.addcontact
 
-<<<<<<< HEAD
 import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -18,30 +17,18 @@ import com.example.agenda.model.Contact
 import com.example.agenda.model.Telefone
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-=======
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import com.example.agenda.databinding.FragmentAddcontactBinding
->>>>>>> origin/main
 
 class AddContactFragment : Fragment() {
 
     private var _binding: FragmentAddcontactBinding? = null
-<<<<<<< HEAD
     private lateinit var myButton: Button
     private lateinit var listTelefone: ArrayList<Telefone>
-=======
->>>>>>> origin/main
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-<<<<<<< HEAD
         _binding = FragmentAddcontactBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -122,14 +109,6 @@ class AddContactFragment : Fragment() {
         }
 
         return root
-=======
-
-        _binding = FragmentAddcontactBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
-
->>>>>>> origin/main
     }
 
     override fun onDestroyView() {

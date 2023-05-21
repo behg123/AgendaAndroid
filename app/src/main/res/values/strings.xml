@@ -3,13 +3,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-<<<<<<< HEAD
     <string name="adicionar_contato">Adicionar Contato</string>
     <string name="tipo_de_telefone">Tipo de Telefone</string>
     <string name="telefone">Telefone</string>
     <string name="nome">Nome</string>
     <string name="teste">teste</string>
     <string name="abreu_dos_santos_junior">Abreu dos Santos Junior</string>
-=======
->>>>>>> origin/main
+
 </resources>

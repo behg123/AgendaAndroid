@@ -15,24 +15,17 @@ import com.example.agenda.R
 import com.example.agenda.adapter.MyAdapter
 import com.example.agenda.databinding.FragmentHomeBinding
 import com.example.agenda.model.Contact
-<<<<<<< HEAD
 import com.example.agenda.model.Telefone
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
-=======
-import com.google.firebase.firestore.ktx.firestore
->>>>>>> origin/main
 import com.google.firebase.ktx.Firebase
 
 class HomeFragment : Fragment() {
 
     private lateinit var recyclerViewContacts: RecyclerView
     private lateinit var listContacts: ArrayList<Contact>
-<<<<<<< HEAD
     private lateinit var listTelefone: ArrayList<Telefone>
 
-=======
->>>>>>> origin/main
     private val db = Firebase.firestore
     private lateinit var adapter: MyAdapter
 
@@ -46,10 +39,7 @@ class HomeFragment : Fragment() {
         recyclerViewContacts.layoutManager = LinearLayoutManager(requireContext())
         recyclerViewContacts.setHasFixedSize(true)
 
-<<<<<<< HEAD
         listTelefone = arrayListOf()
-=======
->>>>>>> origin/main
         listContacts = arrayListOf()
         adapter = MyAdapter(listContacts, requireContext())
         recyclerViewContacts.adapter = adapter
