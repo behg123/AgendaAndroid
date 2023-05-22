@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 import androidx.core.content.ContentProviderCompat
 import androidx.core.content.ContentProviderCompat.requireContext
+import com.example.agenda.adapter.MyAdapter
 import com.example.agenda.model.Contact
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
@@ -75,12 +76,13 @@ class Utils {
         fun sucessMessage(context: Context){
             val alertDialogBuilder = AlertDialog.Builder(context)
             alertDialogBuilder.setTitle("Sucesso")
-            alertDialogBuilder.setMessage("Usuário inserido com sucesso")
+            alertDialogBuilder.setMessage("A ação foi feita com sucesso")
             alertDialogBuilder.setPositiveButton("OK") { dialog, _ ->
                 dialog.dismiss() // Fechar o alerta
             }
             val alertDialog = alertDialogBuilder.create()
             alertDialog.show()
+
         }
 
         fun errorMessage(context: Context){

@@ -27,10 +27,12 @@ class HomeFragment : Fragment() {
     private val db = Firebase.firestore
     private lateinit var adapter: MyAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onResume() {
+        super.onResume()
+        getUserData()
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         recyclerViewContacts = view.findViewById(R.id.recyclerViewContatos)
@@ -42,8 +44,10 @@ class HomeFragment : Fragment() {
         adapter = MyAdapter(listContacts, requireContext())
         recyclerViewContacts.adapter = adapter
 
+
+
         getUserData()
-        Log.d("Mensagem", "Teste")
+
 
 
 
@@ -82,4 +86,12 @@ class HomeFragment : Fragment() {
                 Log.w(TAG, "Error getting documents: ", exception)
             }
     }
+    fun updateData() {
+        getUserData()
+    }
+
+
+
+
+
 }

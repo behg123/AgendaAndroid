@@ -11,5 +11,6 @@
     <string name="abreu_dos_santos_junior">Abreu dos Santos Junior</string>
     <string name="add_telefone">Add Telefone</string>
     <string name="editar_telefone">Editar telefone</string>
+    <string name="editar_contato">Editar Contato</string>
 
 </resources>

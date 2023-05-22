@@ -1,6 +1,5 @@
 package com.example.agenda.ui.Fragments
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,16 +12,12 @@ import com.example.agenda.Utils
 import com.example.agenda.databinding.FragmentAddcontactBinding
 import com.example.agenda.model.Contact
 import com.example.agenda.model.Telefone
-import com.google.firebase.firestore.Query
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 class AddContactFragment : Fragment() {
 
     private var _binding: FragmentAddcontactBinding? = null
     private lateinit var myButton: Button
     private lateinit var listTelefone: ArrayList<Telefone>
-    val db = Firebase.firestore
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
