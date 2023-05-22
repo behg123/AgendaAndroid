@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.example.agenda.R
@@ -24,6 +25,7 @@ class DetailFragment: AppCompatActivity() {
 
     private lateinit var listTelefone: ArrayList<Telefone>
     private lateinit var myButton: Button
+    private lateinit var imageButton: ImageButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +42,13 @@ class DetailFragment: AppCompatActivity() {
 
         val id = idContato.toString()
 
+
         setSpinner(telefonesContato)
         setEditDefault(nomeContato.toString())
         checkFieldsAdd(id)
         checkFieldsEdit(id)
         deleteContact(id)
+        deleteTelefone(id)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -108,7 +112,7 @@ class DetailFragment: AppCompatActivity() {
             val tipo = findViewById<Spinner>(R.id.editSpinnerPhoneType).selectedItem.toString()
             val telefoneNovo = findViewById<TextInputLayout>(R.id.editTelefone).editText?.text.toString()
 
-            if (telefone.isNullOrEmpty() || nome.isNullOrEmpty() || tipo.isNullOrEmpty()) {
+            if (telefone.isEmpty() || nome.isEmpty() || tipo.isEmpty()) {
                 Utils.invalidMessage(this)
             } else {
                 val telefoneObjeto = Telefone(telefone, tipo)
@@ -234,6 +238,44 @@ class DetailFragment: AppCompatActivity() {
             alertDialog.show()
 
         }
+    }
+
+    private fun deleteTelefone(id: String){
+        val firestore = Firebase.firestore
+        val contatoRef = firestore.collection("contato").document(id)
+
+        imageButton = findViewById<ImageButton>(R.id.deleteButton)
+        imageButton.setOnClickListener{
+            val telefone = findViewById<Spinner>(R.id.SpinnerTelefones).selectedItem.toString()
+
+            contatoRef.get()
+                .addOnSuccessListener { documentSnapshot ->
+                    if (documentSnapshot.exists()) {
+                        val contato = documentSnapshot.toObject(Contact::class.java)
+                        val listaTelefones = contato?.telefones
+
+                        val telefoneSelecionado = listaTelefones!!.indexOfFirst { it.numero == telefone }
+
+
+                        if (listaTelefones != null) {
+                            listaTelefones.removeAt(telefoneSelecionado)
+                            contatoRef.update("telefones", listaTelefones)
+                                .addOnSuccessListener {
+                                    Utils.sucessMessage(this)
+                                    setResult(Activity.RESULT_OK)
+                                    finish()
+                                }
+                                .addOnFailureListener { e ->
+                                    Utils.errorMessage(this)
+                                }
+                        }
+                    }
+                }
+                .addOnFailureListener { e ->
+                    // Tratar falha na recuperação do documento
+                }
+        }
+
     }
 
 

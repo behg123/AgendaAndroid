@@ -12,5 +12,10 @@
     <string name="add_telefone">Add Telefone</string>
     <string name="editar_telefone">Editar telefone</string>
     <string name="editar_contato">Editar Contato</string>
+    <string name="adicionar_novo_telefone">Adicionar Novo Telefone</string>
+    <string name="n_mero_do_telefone">Número do telefone</string>
+    <string name="editar_um_telefone">Editar um Telefone</string>
+    <string name="selecione_o_telefone">Selecione o telefone</string>
+    <string name="deletar_usuario">DELETAR USUARIO</string>
 
 </resources>
